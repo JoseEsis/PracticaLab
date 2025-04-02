@@ -1,0 +1,86 @@
+program ejercicio10;
+
+
+var
+  saldo, monto: Real;
+  opcion, clave, claveCorrecta: Integer;
+  continuar, verResumen: Char;
+begin
+  
+  saldo := 1000;
+  claveCorrecta := 1234;
+  
+  write('Ingrese su clave: ');
+  readln(clave);
+  
+  if clave <> claveCorrecta then
+  begin
+    writeln('Clave incorrecta. Acceso denegado.');
+    readln;
+   
+  end;
+  
+  repeat
+ 
+    writeln('--- Cajero Automático ---');
+    writeln('1. Extraer dinero');
+    writeln('2. Depositar dinero');
+    writeln('3. Transferir dinero');
+    writeln('4. Consultar saldo');
+    writeln('5. Salir');
+    write('Seleccione una opción: ');
+    readln(opcion);
+    
+    if opcion = 1 then
+    begin
+      write('Ingrese el monto a retirar: ');
+      readln(monto);
+      if (monto > 0) and (monto <= saldo) then
+        saldo := saldo - monto
+      else
+        writeln('Monto inválido o insuficiente.');
+    end
+    else if opcion = 2 then
+    begin
+      write('Ingrese el monto a depositar: ');
+      readln(monto);
+      if monto > 0 then
+        saldo := saldo + monto
+      else
+        writeln('Monto inválido.');
+    end
+    else if opcion = 3 then
+    begin
+      write('Ingrese el monto a transferir: ');
+      readln(monto);
+      if (monto > 0) and (monto <= saldo) then
+        saldo := saldo - monto
+      else
+        writeln('Monto inválido o insuficiente.');
+    end
+    else if opcion = 4 then
+    begin
+      writeln('Saldo actual: S/', saldo:0:2);
+    end
+    else if opcion = 5 then
+    begin
+      writeln('Gracias por usar el cajero automático.');
+ 
+    end
+    else
+    begin
+      writeln('Opción no válida.');
+    end;
+    
+    write('¿Desea ver el resumen de la operación? (S/N): ');
+    readln(verResumen);
+    if (verResumen = 'S') or (verResumen = 's') then
+      writeln('Saldo actual: S/', saldo:0:2);
+    
+    write('¿Desea realizar otra operación? (S/N): ');
+    readln(continuar);
+  until (continuar <> 'S') and (continuar <> 's');
+  
+  writeln('Gracias por su visita.');
+  readln;
+end.

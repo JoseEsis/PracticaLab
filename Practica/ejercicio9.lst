@@ -1,0 +1,53 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program ejercicio9;
+    2     0 
+    3     0 var
+    4     0   i: Integer;
+    5     0 begin
+    6     0  
+    7     0   writeln('Múltiplos de 7 entre 1 y 100:');
+    8     3   
+    9     3   for i := 7 to 100 do
+   10     7     if i mod 7 = 0 then
+   11    13       writeln(i);
+   12    17   
+   13    17   readln;
+   14    18 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 i            46     variable    integer         0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        29          ;7
+    1     wrstr        0         0          ;7
+    2     wrlin        0         0          ;7
+    3     ldadr        1         5          ;7
+    4     ldcon.i      0         7          ;9
+    5     ldcon.i      0       100          ;9
+    6     for1u.i      0        17          ;9
+    7     ldval.i      1         5          ;10
+    8     ldcon.i      0         7          ;10
+    9     modop.i      0         0          ;10
+   10     ldcon.i      0         0          ;10
+   11     releq.i      0         0          ;10
+   12     jmpiz        0        16          ;10
+   13     ldval.i      1         5          ;11
+   14     wrval.i      0         0          ;11
+   15     wrlin        0         0          ;11
+   16     for2u.i      0         7          ;11
+   17     rdlin        0         0          ;11
+   18     stopx        0         0          ;13

@@ -1,0 +1,6 @@
+Pascal-FC post-mortem report on ejercicio6
+- Interpreter Version P5.3 - 
+Abnormal halt in main program  with pc = 27
+Reason:   reading past end of file
+
+

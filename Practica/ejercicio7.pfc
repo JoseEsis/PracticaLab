@@ -1,0 +1,22 @@
+program ejercicio7;
+
+var
+  horas, minutos, segundos, tiempoTotal: Integer;
+begin
+    
+  write('Ingrese las horas: ');
+  readln(horas);
+  
+  write('Ingrese los minutos: ');
+  readln(minutos);
+  
+  write('Ingrese los segundos: ');
+  readln(segundos);
+  
+  tiempoTotal := (horas * 3600) + (minutos * 60) + segundos;
+  
+  writeln('El tiempo total en segundos es: ', tiempoTotal);
+  
+  readln;
+end.
+

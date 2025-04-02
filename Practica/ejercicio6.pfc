@@ -1,0 +1,18 @@
+program ejercicio6;
+var
+  importeTotal, importeFinal: Real;
+begin
+   
+  write('Ingrese el importe total de la compra: S/');
+  readln(importeTotal);
+  
+  if importeTotal >= 150 then
+    importeFinal := importeTotal * 0.90  
+  else
+    importeFinal := importeTotal;
+  
+  writeln('El importe a pagar es: S/', importeFinal:0:2);
+  
+  readln;
+end.
+

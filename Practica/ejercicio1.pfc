@@ -1,0 +1,8 @@
+program ejercicio1;
+
+var
+	nombre: char;
+
+begin
+
+end.

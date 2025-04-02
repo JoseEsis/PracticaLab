@@ -1,0 +1,66 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program ejercicio6;
+    2     0 var
+    3     0   importeTotal, importeFinal: Real;
+    4     0 begin
+    5     0    
+    6     0   write('Ingrese el importe total de la compra: S/');
+    7     2   readln(importeTotal);
+    8     5   
+    9     5   if importeTotal >= 150 then
+   10    10     importeFinal := importeTotal * 0.90  
+   11    13   else
+   12    15     importeFinal := importeTotal;
+   13    19   
+   14    19   writeln('El importe a pagar es: S/', importeFinal:0:2);
+   15    26   
+   16    26   readln;
+   17    27 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 importetot   46     variable    real            0      True    1    5    0
+ 48 importefin   47     variable    real            0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        41          ;6
+    1     wrstr        0         0          ;6
+    2     ldadr        1         5          ;7
+    3     rdinp.r      0         0          ;7
+    4     rdlin        0         0          ;7
+    5     ldval.r      1         5          ;9
+    6     ldcon.i      0       150          ;9
+    7     float        0         0          ;9
+    8     relge.r      0         0          ;9
+    9     jmpiz        0        16          ;9
+   10     ldadr        1         6          ;9
+   11     ldval.r      1         5          ;10
+   12     ldcon.r      0         1          ;10
+   13     mulop.r      0         0          ;10
+   14     store.r      0         0          ;10
+   15     jmpuc        0        19          ;10
+   16     ldadr        1         6          ;11
+   17     ldval.r      1         5          ;12
+   18     store.r      0         0          ;12
+   19     ldcon.i      0        25          ;14
+   20     wrstr        0        41          ;14
+   21     ldval.r      1         6          ;14
+   22     ldcon.i      0         0          ;14
+   23     ldcon.i      0         2          ;14
+   24     w2frm        0         0          ;14
+   25     wrlin        0         0          ;14
+   26     rdlin        0         0          ;14
+   27     stopx        0         0          ;16
