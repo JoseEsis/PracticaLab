@@ -1,0 +1,13 @@
+program ejercicio4;
+
+var
+	numero: integer; 
+begin
+	writeln('Ingrese un numero: ');
+	readln(numero);
+	if numero > 100 then 
+		writeln('El numero ', numero, ' es mayor a 100. ')
+	else
+		writeln('El numero ', numero, ' es menor a 100. ')
+
+end.

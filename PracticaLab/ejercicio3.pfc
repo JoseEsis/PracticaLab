@@ -1,0 +1,26 @@
+program ejercicio3;
+
+var
+  n: integer;
+
+begin
+
+  write('Ingrese un numero del 1 al 12: ');
+  readln(n);
+
+  if n = 1 then writeln('Enero') else
+  if n = 2 then writeln('Febrero') else
+  if n = 3 then writeln('Marzo') else
+  if n = 4 then writeln('Abril') else
+  if n = 5 then writeln('Mayo') else
+  if n = 6 then writeln('Junio') else
+  if n = 7 then writeln('Julio') else
+  if n = 8 then writeln('Agosto') else
+  if n = 9 then writeln('Septiembre') else
+  if n = 10 then writeln('Octubre') else
+  if n = 11 then writeln('Noviembre') else
+  if n = 12 then writeln('Diciembre') else
+  writeln('Numero incorrecto');
+
+  readln;
+end.

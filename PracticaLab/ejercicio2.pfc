@@ -1,0 +1,14 @@
+program ejercicio2;
+
+var 
+	numero: integer;
+begin
+	writeln('Ingrese un numero: ');
+	readln(numero);
+	if numero mod 5 = 0 then 
+		writeln('El numero ingresado es multiiplo de 5. ')
+	else
+		writeln('El numero ingresado no es multiplo de 5.')	 
+	
+
+end.

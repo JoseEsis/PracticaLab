@@ -1,0 +1,65 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program ejercicio1;
+    2     0 
+    3     0 
+    4     0 
+    5     0 var 
+    6     0  nombre, detectar: string; 
+***********                         ^ 0 
+    7     0 begin
+    8     0  nombre := 'Jose';
+***********                 ^28 
+    9     2  repeat
+   10     2   writeln('Introduce el nombre correcto');
+   11     5   readln(detectar);
+   12     8  until detectar = nombre;
+   13    12  writeln('Bienvenido, ', nombre, '!');
+   14    19  readln; 
+   15    20 
+   16    20 end.
+
+ Error diagnostics
+
+E0 -  undeclared identifier
+E28 -  unexpected symbol
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 nombre       46     variable    notyp           0      True    1    5    0
+ 48 detectar     47     variable    notyp           0      True    1    5    0
+
+Generated P-code
+
+    0     ldadr        1         5          ;7
+    1     store        0         0          ;8
+    2     ldcon.i      0        28          ;10
+    3     wrstr        0         4          ;10
+    4     wrlin        0         0          ;10
+    5     ldadr        1         5          ;11
+    6     rdinp        0         0          ;11
+    7     rdlin        0         0          ;11
+    8     ldval        1         5          ;12
+    9     ldval        1         5          ;12
+   10     releq        0         0          ;12
+   11     jmpiz        0         2          ;12
+   12     ldcon.i      0        12          ;13
+   13     wrstr        0        32          ;13
+   14     ldval        1         5          ;13
+   15     wrval        0         0          ;13
+   16     ldcon.c      0        33          ;13
+   17     wrval.c      0         0          ;13
+   18     wrlin        0         0          ;13
+   19     rdlin        0         0          ;13
+   20     stopx        0         0          ;14

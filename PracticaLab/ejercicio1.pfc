@@ -1,0 +1,16 @@
+program ejercicio1;
+
+
+
+var 
+	nombre, detectar: string; 
+begin
+	nombre := 'Jose';
+	repeat
+		writeln('Introduce el nombre correcto');
+		readln(detectar);
+	until detectar = nombre;
+	writeln('Bienvenido, ', nombre, '!');
+	readln; 
+
+end.

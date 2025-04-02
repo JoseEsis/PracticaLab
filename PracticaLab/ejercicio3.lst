@@ -1,0 +1,152 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program ejercicio3;
+    2     0 
+    3     0 var
+    4     0   n: integer;
+    5     0 
+    6     0 begin
+    7     0 
+    8     0   write('Ingrese un numero del 1 al 12: ');
+    9     2   readln(n);
+   10     5 
+   11     5   if n = 1 then writeln('Enero') else
+   12    12   if n = 2 then writeln('Febrero') else
+   13    20   if n = 3 then writeln('Marzo') else
+   14    28   if n = 4 then writeln('Abril') else
+   15    36   if n = 5 then writeln('Mayo') else
+   16    44   if n = 6 then writeln('Junio') else
+   17    52   if n = 7 then writeln('Julio') else
+   18    60   if n = 8 then writeln('Agosto') else
+   19    68   if n = 9 then writeln('Septiembre') else
+   20    76   if n = 10 then writeln('Octubre') else
+   21    84   if n = 11 then writeln('Noviembre') else
+   22    92   if n = 12 then writeln('Diciembre') else
+   23   100   writeln('Numero incorrecto');
+   24   104 
+   25   104   readln;
+   26   105 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 n            46     variable    integer         0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        31          ;8
+    1     wrstr        0         0          ;8
+    2     ldadr        1         5          ;9
+    3     rdinp.i      0         0          ;9
+    4     rdlin        0         0          ;9
+    5     ldval.i      1         5          ;11
+    6     ldcon.i      0         1          ;11
+    7     releq.i      0         0          ;11
+    8     jmpiz        0        13          ;11
+    9     ldcon.i      0         5          ;11
+   10     wrstr        0        31          ;11
+   11     wrlin        0         0          ;11
+   12     jmpuc        0       104          ;11
+   13     ldval.i      1         5          ;12
+   14     ldcon.i      0         2          ;12
+   15     releq.i      0         0          ;12
+   16     jmpiz        0        21          ;12
+   17     ldcon.i      0         7          ;12
+   18     wrstr        0        36          ;12
+   19     wrlin        0         0          ;12
+   20     jmpuc        0       104          ;12
+   21     ldval.i      1         5          ;13
+   22     ldcon.i      0         3          ;13
+   23     releq.i      0         0          ;13
+   24     jmpiz        0        29          ;13
+   25     ldcon.i      0         5          ;13
+   26     wrstr        0        43          ;13
+   27     wrlin        0         0          ;13
+   28     jmpuc        0       104          ;13
+   29     ldval.i      1         5          ;14
+   30     ldcon.i      0         4          ;14
+   31     releq.i      0         0          ;14
+   32     jmpiz        0        37          ;14
+   33     ldcon.i      0         5          ;14
+   34     wrstr        0        48          ;14
+   35     wrlin        0         0          ;14
+   36     jmpuc        0       104          ;14
+   37     ldval.i      1         5          ;15
+   38     ldcon.i      0         5          ;15
+   39     releq.i      0         0          ;15
+   40     jmpiz        0        45          ;15
+   41     ldcon.i      0         4          ;15
+   42     wrstr        0        53          ;15
+   43     wrlin        0         0          ;15
+   44     jmpuc        0       104          ;15
+   45     ldval.i      1         5          ;16
+   46     ldcon.i      0         6          ;16
+   47     releq.i      0         0          ;16
+   48     jmpiz        0        53          ;16
+   49     ldcon.i      0         5          ;16
+   50     wrstr        0        57          ;16
+   51     wrlin        0         0          ;16
+   52     jmpuc        0       104          ;16
+   53     ldval.i      1         5          ;17
+   54     ldcon.i      0         7          ;17
+   55     releq.i      0         0          ;17
+   56     jmpiz        0        61          ;17
+   57     ldcon.i      0         5          ;17
+   58     wrstr        0        62          ;17
+   59     wrlin        0         0          ;17
+   60     jmpuc        0       104          ;17
+   61     ldval.i      1         5          ;18
+   62     ldcon.i      0         8          ;18
+   63     releq.i      0         0          ;18
+   64     jmpiz        0        69          ;18
+   65     ldcon.i      0         6          ;18
+   66     wrstr        0        67          ;18
+   67     wrlin        0         0          ;18
+   68     jmpuc        0       104          ;18
+   69     ldval.i      1         5          ;19
+   70     ldcon.i      0         9          ;19
+   71     releq.i      0         0          ;19
+   72     jmpiz        0        77          ;19
+   73     ldcon.i      0        10          ;19
+   74     wrstr        0        73          ;19
+   75     wrlin        0         0          ;19
+   76     jmpuc        0       104          ;19
+   77     ldval.i      1         5          ;20
+   78     ldcon.i      0        10          ;20
+   79     releq.i      0         0          ;20
+   80     jmpiz        0        85          ;20
+   81     ldcon.i      0         7          ;20
+   82     wrstr        0        83          ;20
+   83     wrlin        0         0          ;20
+   84     jmpuc        0       104          ;20
+   85     ldval.i      1         5          ;21
+   86     ldcon.i      0        11          ;21
+   87     releq.i      0         0          ;21
+   88     jmpiz        0        93          ;21
+   89     ldcon.i      0         9          ;21
+   90     wrstr        0        90          ;21
+   91     wrlin        0         0          ;21
+   92     jmpuc        0       104          ;21
+   93     ldval.i      1         5          ;22
+   94     ldcon.i      0        12          ;22
+   95     releq.i      0         0          ;22
+   96     jmpiz        0       101          ;22
+   97     ldcon.i      0         9          ;22
+   98     wrstr        0        99          ;22
+   99     wrlin        0         0          ;22
+  100     jmpuc        0       104          ;22
+  101     ldcon.i      0        17          ;23
+  102     wrstr        0       108          ;23
+  103     wrlin        0         0          ;23
+  104     rdlin        0         0          ;23
+  105     stopx        0         0          ;25
